@@ -14,7 +14,7 @@
         margin: 0;
         font-family: "myriad variable concept", sans-serif;
         background: #1d2b57;
-        color: white;
+        color: white;;
       }
 
       header {
@@ -83,6 +83,62 @@
         color: #f15a29;
         font-size: 20px;
       }
+
+      .rectangle {
+    width: 2750px;         /* Sets the width of the rectangle */
+    height: 1100px;        /* Sets the height of the rectangle */
+    background-color: #f15a29; 
+    place-content: center;  /* Sets the background color of the rectangle */
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    /* Sets the height of the square */
+  .square {
+  width: 1000px;
+  height: 1030px;
+  background-color: #142b64;
+  border-radius: 50% 50% 50% 50% / 0% 80% 80% 0%;
+  display:flex;
+  margin-right: 200px;
+}
+.square2 {
+  width: 1500px;
+  height: 1030px;
+  background: #142b64;
+  position: relative;
+  overflow: hidden;
+  margin-right: 400px;
+}
+
+/* Outer curve */
+.square2::before {
+  content: "";
+  position: absolute;
+  left: -300px;
+  top: 0;
+  width: 600px;
+  height: 100%;
+  background: #142b64;
+  border-radius: 50%;
+}
+
+/* Inner cut-out (creates inward curve) */
+.square2::after {
+  content: "";
+  position: absolute;
+  left: -200px;
+  top: 0;
+  width: 440px;
+  height: 100%;
+  background: #f15a29; /* must match page background */
+  border-radius: 50%;
+}
+
+
     </style>
   </head>
   <body>
@@ -102,6 +158,10 @@
 </nav>
     </header>
 
-    
+   <div class="rectangle">
+    <div class="square"></div>
+    <div class="square2"></div>
+   </div>
+
   </body>
 </html>
